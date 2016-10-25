@@ -46,10 +46,10 @@ create-java-home:
     - require:
       - archive: unpack-jdk-tarball
 
-update-java-home-symlink:
-  file.symlink:
-    - name: {{ java.java_home }}
-    - target: {{ java.java_real_home }}
+# update-java-home-symlink:
+#   file.symlink:
+#     - name: {{ java.java_home }}
+#     - target: {{ java.java_real_home }}
 
 remove-jdk-tarball:
   file.absent:
